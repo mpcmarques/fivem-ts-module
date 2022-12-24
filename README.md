@@ -17,15 +17,11 @@ Also they come with prettier and eslint configured.
 
 Clone the repository, run yarn
 
-## running on browser
+## development mode
 
-open a terminal in the web folder and run yarn start (npm run start)
-
-## running on server
-
-open a terminal in the web folder and run yarn start:game (npm run start:game)
+open a terminal and run yarn dev (npm run dev)
 
 ## building
 
-open a terminal in the web folder and run yarn build (npm run build)
+open a terminal and run yarn build (npm run build)
 
