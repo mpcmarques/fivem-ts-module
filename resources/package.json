@@ -7,8 +7,8 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "dev": "webpack --mode development --watch",
-    "build": "webpack --mode production"
+    "dev": "webpack --mode=development --watch",
+    "build": "webpack --mode=production"
   },
   "devDependencies": {
     "@citizenfx/client": "^2.0.6168-1",

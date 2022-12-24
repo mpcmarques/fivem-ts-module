@@ -59,7 +59,7 @@ const server = {
     },
     plugins: [new CleanWebpackPlugin()],
     optimization: {
-        minimize: false,
+        minimize: true,
     },
     resolve: {
         extensions: [".ts", ".js"],
@@ -92,7 +92,7 @@ const shared = {
     },
     plugins: [new CleanWebpackPlugin()],
     optimization: {
-        minimize: false,
+        minimize: true,
     },
     resolve: {
         extensions: [".ts", ".js"],
