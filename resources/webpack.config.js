@@ -1,4 +1,5 @@
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+var WebpackObfuscator = require("webpack-obfuscator");
 const path = require("path");
 const glob = require("glob");
 const serverBuild = path.resolve(__dirname, "../build/server");
@@ -17,17 +18,14 @@ const client = {
                 test: /\.tsx?$/,
                 loader: "esbuild-loader",
                 options: {
-                    loader: "tsx", // Or 'ts' if you don't need tsx
+                    loader: "tsx",
                     target: "es2015",
                 },
                 exclude: /node_modules/,
             },
         ],
     },
-    plugins: [new CleanWebpackPlugin()],
-    optimization: {
-        minimize: true,
-    },
+    plugins: [new CleanWebpackPlugin(), new WebpackObfuscator()],
     resolve: {
         extensions: [".tsx", ".ts", ".js"],
     },
@@ -38,10 +36,10 @@ const client = {
 };
 
 const server = {
-  entry: glob.sync("./server/**.ts").reduce(function (obj, el) {
-    obj[path.parse(el).name] = el;
-    return obj;
-}, {}),
+    entry: glob.sync("./server/**.ts").reduce(function (obj, el) {
+        obj[path.parse(el).name] = el;
+        return obj;
+    }, {}),
     target: "node",
     devtool: "eval-source-map",
     module: {
@@ -50,17 +48,14 @@ const server = {
                 test: /\.tsx?$/,
                 loader: "esbuild-loader",
                 options: {
-                    loader: "tsx", // Or 'ts' if you don't need tsx
+                    loader: "tsx",
                     target: "es2015",
                 },
                 exclude: /node_modules/,
             },
         ],
     },
-    plugins: [new CleanWebpackPlugin()],
-    optimization: {
-        minimize: true,
-    },
+    plugins: [new CleanWebpackPlugin(), new WebpackObfuscator()],
     resolve: {
         extensions: [".ts", ".js"],
     },
@@ -71,10 +66,10 @@ const server = {
 };
 
 const shared = {
-  entry: glob.sync("./shared/**.ts").reduce(function (obj, el) {
-    obj[path.parse(el).name] = el;
-    return obj;
-}, {}),
+    entry: glob.sync("./shared/**.ts").reduce(function (obj, el) {
+        obj[path.parse(el).name] = el;
+        return obj;
+    }, {}),
     target: "node",
     devtool: "eval-source-map",
     module: {
@@ -83,17 +78,14 @@ const shared = {
                 test: /\.tsx?$/,
                 loader: "esbuild-loader",
                 options: {
-                    loader: "tsx", // Or 'ts' if you don't need tsx
+                    loader: "tsx",
                     target: "es2015",
                 },
                 exclude: /node_modules/,
             },
         ],
     },
-    plugins: [new CleanWebpackPlugin()],
-    optimization: {
-        minimize: true,
-    },
+    plugins: [new CleanWebpackPlugin(), new WebpackObfuscator()],
     resolve: {
         extensions: [".ts", ".js"],
     },

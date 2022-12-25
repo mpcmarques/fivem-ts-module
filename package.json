@@ -1,23 +1,23 @@
 {
-  "name": "resources",
-  "version": "1.0.0",
-  "private": true,
-  "description": "Codex - Fivem typescript boilerplate",
-  "author": "Codex <mateus@codexfactory.tech",
-  "scripts": {
-    "install": "yarn build",
-    "install-ui": "cd ui && yarn",
-    "install-resources": "cd resources && yarn",
-    "build": "cd resources && yarn build && cd ../ui && yarn build",
-    "build-resources": "cd resources && yarn build",
-    "build-ui": "cd ui && yarn build",
-    "predev": "yarn install",
-    "dev": "nodemon --exec yarn build"
-  },
-  "devDependencies": {
-    "eslint": "^8.30.0",
-    "lerna": "^6.1.0",
-    "nodemon": "^2.0.20",
-    "prettier": "^2.8.1"
-  }
+    "name": "resources",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Codex - Fivem typescript boilerplate",
+    "author": "Codex <mateus@codexfactory.tech",
+    "scripts": {
+        "install": "yarn install-ui && yarn install-resources",
+        "install-ui": "cd ui && yarn",
+        "install-resources": "cd resources && yarn",
+        "build": "yarn lerna run build",
+        "build-resources": "cd resources && yarn build",
+        "build-ui": "cd ui && yarn build",
+        "predev": "yarn install",
+        "dev": "nodemon --exec yarn build"
+    },
+    "devDependencies": {
+        "eslint": "^8.30.0",
+        "lerna": "^6.1.0",
+        "nodemon": "^2.0.20",
+        "prettier": "^2.8.1"
+    }
 }

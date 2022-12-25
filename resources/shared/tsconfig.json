@@ -1,11 +1,14 @@
 {
-  "compilerOptions": {
-    "module": "CommonJS",
-    "esModuleInterop": true,
-    "target": "ES6",
-    "moduleResolution": "Node",
-    "sourceMap": true,
-    "outDir": "../../build"
-  },
-  "lib": ["ES2015"]
+    "compilerOptions": {
+        "target": "ESNext",
+        "strict": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "module": "ESNext",
+        "types": ["@citizenfx/server", "@citizenfx/client", "@types/node"],
+        "lib": ["ESNext"],
+        "moduleResolution": "node"
+    },
+    "include": ["./**/*"],
+    "exclude": ["**/node_modules", "**/__tests__/*"]
 }
