@@ -15,5 +15,13 @@ const sendReactMessage = (action: string, data: object | boolean | string | numb
  */
 const showUi = (uiVisibilityName: string) => {
     SetNuiFocus(true, true);
-    sendReactMessage(uiVisibilityName, true)
+    sendReactMessage(uiVisibilityName, true);
+}
+
+/**
+ * Hides UI
+ */
+const hideUi = (uiVisibilityName: string) => {
+    SetNuiFocus(false, false);
+    sendReactMessage(uiVisibilityName, false);
 }
