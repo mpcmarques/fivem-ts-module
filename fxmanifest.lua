@@ -8,8 +8,6 @@ version '1.0.0'
 
 lua54 'yes'
 
-require 'yarn'
-
 ui_page 'ui/build/index.html'
 
 client_script "build/client/**/*"
