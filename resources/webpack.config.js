@@ -30,7 +30,7 @@ const client = {
         extensions: [".tsx", ".ts", ".js"],
     },
     output: {
-        filename: "client.js",
+        filename: "[name].js",
         path: path.resolve(clientBuild),
     },
 };
@@ -60,39 +60,9 @@ const server = {
         extensions: [".ts", ".js"],
     },
     output: {
-        filename: "server.js",
+        filename: "[name].js",
         path: path.resolve(serverBuild),
     },
 };
 
-const shared = {
-    entry: glob.sync("./shared/**.ts").reduce(function (obj, el) {
-        obj[path.parse(el).name] = el;
-        return obj;
-    }, {}),
-    target: "node",
-    devtool: "eval-source-map",
-    module: {
-        rules: [
-            {
-                test: /\.tsx?$/,
-                loader: "esbuild-loader",
-                options: {
-                    loader: "tsx",
-                    target: "es2015",
-                },
-                exclude: /node_modules/,
-            },
-        ],
-    },
-    plugins: [new CleanWebpackPlugin(), new WebpackObfuscator()],
-    resolve: {
-        extensions: [".ts", ".js"],
-    },
-    output: {
-        filename: "shared.js",
-        path: path.resolve(sharedBuild),
-    },
-};
-
-module.exports = [server, shared, client];
+module.exports = [server, client];
