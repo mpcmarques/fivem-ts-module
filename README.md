@@ -15,13 +15,13 @@ Also they come with prettier and eslint configured.
 
 ## installing dependencies
 
-Clone the repository, run yarn
+Clone the repository, run yarn on project folder
 
 ## development mode
 
-open a terminal and run yarn dev (npm run dev)
+open a terminal on project folder and run yarn dev (npm run dev)
 
 ## building
 
-open a terminal and run yarn build (npm run build)
+open a terminal on project folder and run yarn build (npm run build)
 

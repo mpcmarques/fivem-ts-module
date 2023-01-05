@@ -8,10 +8,10 @@ version '1.0.0'
 
 lua54 'yes'
 
-ui_page 'ui/build/index.html'
+ui_page 'project/ui/build/index.html'
 
-client_script "build/client/**/*"
-shared_script 'build/shared/**/*'
-server_scripts {'@oxmysql/lib/MySQL.ts', "build/server/**/*"}
+client_script "project/build/client/**/*"
+shared_script 'project/build/shared/**/*'
+server_scripts {'@oxmysql/lib/MySQL.ts', "project/build/server/**/*"}
 
-files {'ui/build/index.html', 'ui/build/**/*'}
+files {'project/ui/build/index.html', 'project/ui/build/**/*'}

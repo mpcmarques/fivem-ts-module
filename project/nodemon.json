@@ -1,0 +1,6 @@
+{
+	"verbose": true,
+	"ignore": ["**/node_modules/**", "**/build/**", "**/*.mjs"],
+	"ext": "ts,js,hbs,cjs,tsx",
+	"delay": 2500
+}
