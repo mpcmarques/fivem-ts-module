@@ -19,7 +19,13 @@ Clone the repository, run yarn on project folder
 
 ## development mode
 
+### Full module
+
 open a terminal on project folder and run yarn dev (npm run dev)
+
+### Run as a website
+
+open a terminal on project/ui folder and run yarn then yarn start
 
 ## building
 
